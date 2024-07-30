@@ -15,3 +15,43 @@ body {
 	align-items: center;
 	background: url('./robot.gif') left center / contain no-repeat;
 }
+
+button {
+	cursor: pointer;
+	width: 200px;
+	height: 50px;
+	font-family: 'Courier New', Courier, monospace;
+	font-size: 20px;
+	color: #fff;
+	background-color: #ff3482;
+	border: 0;
+	border-radius: 5px;
+	box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, .2);
+}
+
+button:active {
+	transform: scale(0.98);
+}
+
+button:disabled {
+	cursor: default;
+	filter: brightness(30%)
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+	.container {
+		background-size: cover;
+		background-position: center;
+	}
+
+	button {
+		box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, .5);
+	}
+}
+
+@media (hover: hover) {
+	button:hover {
+		filter: brightness(95%);
+	}
+}
